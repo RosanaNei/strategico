@@ -1,0 +1,230 @@
+.seccion-principal {
+	display: grid;
+    grid-template-columns: 1 fr;
+    row-gap: .5rem;
+    background-color: var(--fondo-color);;
+    
+}
+
+.seccion-principal-part {
+	min-height: 45rem;
+    height: 100%;
+	position: relative;
+	overflow: hidden;
+    background-position: center;
+    background-size: cover;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:flex-end;
+ }
+
+.seccion-principal-part  p{
+	padding: 1rem;
+    text-align: left;	
+    font-size: 1.2rem;
+    font-weight:lighter;
+}
+
+/*primer artículo*/
+
+#titulo{
+    background-image: url(../imgs/img1.png);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#titulo h1{
+    font-size: 3rem;
+    text-align: center;
+    color:var(--fuente-clara);
+    font-weight: bold;
+    margin-top: 5rem;
+    padding: 1rem ;
+    width: fit-content;
+    background-color: rgba(14, 8, 8, 0.76);
+}
+
+#titulo span{
+    font-size:5rem;
+    color: rgb(224, 20, 20);
+}
+
+#explicaciones{
+    background-color:rgba(197, 187, 174, 0.836);
+}
+
+/*segudo artículo*/
+
+#servicios{
+    background-image: url(../imgs/img2.png);
+    justify-content: flex-end;
+    align-items: left;
+    min-height:45rem;
+   
+  }
+/*segundo articulo menú*/
+
+.solapa{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--fondo-color);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.solapa-contenido {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.solapa li{
+    background-color: var(--fondo-color);
+    width: 100%;
+    padding: 1rem 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.solapa li:not(:first-child):hover{
+    filter: brightness(1.5);
+}
+
+.solapa a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  color:var(--fuente-clara);
+  display: block;
+  transition: 0.3s;
+}
+
+.solapa a:hover, .overlay a:focus {
+    filter:invert(1.2);
+    transition: .5s; 
+}
+
+.solapa #closebtn {
+  position: absolute;
+  top: 6rem;
+  right: 2.3rem;
+  font-size: 3rem;
+  z-index: 3;
+}
+
+#servicios-menu-titulo{
+    background-color: var(--fondo-verde);
+    font-size: 1.8rem;
+    font-weight:900;
+    margin-bottom: 2rem;
+    font-style: oblique;
+    text-decoration:underline;
+}
+
+#servicios-texto{
+    display: flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#servicios-texto-txts #servicios-texto-txts-h2, #servicios-texto-txts-parrafo{
+    background-color: var(--fondo-verde);
+    color: var(--fuente-clara);
+}
+
+#servicios-texto-txts-h2{
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 1rem 0 0 1rem;
+}
+
+
+.fa-palette{
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    cursor: pointer;
+    color:darkred;
+    font-size: 3rem;
+}
+
+.fa-palette:hover{
+    filter:brightness(2);
+    transition: .5s;   
+}
+
+
+
+@media screen and (max-height: 450px) {
+  .solapa a {font-size: 1rem}
+  .solapa .closebtn {
+  font-size: 2rem;
+  top: .9rem;
+  right: 2rem;
+  }
+}
+
+@media screen and (max-width: 900px) { 
+    .seccion-principal {
+        width: 100%;
+    }
+    #titulo h1{
+        font-size: 2.2rem;
+    }
+    
+    #titulo span{
+        font-size:3.5rem;
+    }
+  
+    #explicaciones{
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    #servicios-texto-txts-h2, #servicios-texto-txts-parrafo{
+        line-height: 1.5rem;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) { 
+    .seccion-principal {
+        width: 100%;
+    }
+    #titulo h1{
+        font-size: 2rem;
+    }
+    
+    #titulo span{
+        font-size:3rem;
+    }
+  
+    #servicios-texto-txts-h2, #servicios-texto-txts-parrafo{
+        line-height: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) { 
+    #titulo h1{
+        font-size: 2rem;
+    }
+    
+    #titulo span{
+        font-size:3rem;
+    }
+
+    #servicios-texto-txts-parrafo{
+        line-height: 1.2rem;
+        }
+    }
